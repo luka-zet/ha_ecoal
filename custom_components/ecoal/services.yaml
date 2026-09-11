@@ -1,0 +1,29 @@
+add_fuel:
+  name: Dodaj węgiel
+  description: Dodaje określoną ilość węgla (kg) do zasobnika w sterowniku eCoal.
+  fields:
+    fuel:
+      name: Ilość węgla (kg)
+      description: Ilość dodawanego węgla w kilogramach.
+      required: true
+      selector:
+        number:
+          min: 1
+          max: 500
+          unit_of_measurement: kg
+          mode: box
+
+set_time_to_empty:
+  name: Ustaw czas do wypalenia
+  description: Ustawia czas do całkowitego wypalenia węgla w zasobniku.
+  fields:
+    time_to_empty:
+      name: Czas do wypalenia
+      description: Wartość czasu do wypalenia węgla.
+      required: true
+      selector:
+        number:
+          min: 0
+          max: 10000
+          mode: box
+

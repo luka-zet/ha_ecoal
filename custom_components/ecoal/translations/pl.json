@@ -1,0 +1,24 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Połącz ze sterownikiem eCoal",
+        "description": "Wprowadź adres IP lub nazwę hosta oraz dane logowania (HTTP Basic Auth) do sterownika kotła eCoal.",
+        "data": {
+          "host": "Host / Adres IP",
+          "port": "Port (opcjonalnie, domyślnie 80)",
+          "username": "Użytkownik",
+          "password": "Hasło"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Nie udało się połączyć ze sterownikiem eCoal. Sprawdź adres hosta i połączenie sieciowe.",
+      "invalid_auth": "Nieprawidłowa nazwa użytkownika lub hasło.",
+      "unknown": "Wystąpił nieoczekiwany błąd."
+    },
+    "abort": {
+      "already_configured": "To urządzenie eCoal jest już skonfigurowane."
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to eCoal controller",
+        "description": "Enter the IP address or hostname and login credentials (HTTP Basic Auth) for your eCoal boiler controller.",
+        "data": {
+          "host": "Host / IP Address",
+          "port": "Port (optional, default 80)",
+          "username": "Username",
+          "password": "Password"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Failed to connect to the eCoal controller. Check the host address and network connection.",
+      "invalid_auth": "Invalid username or password.",
+      "unknown": "Unexpected error occurred."
+    },
+    "abort": {
+      "already_configured": "This eCoal controller is already configured."
+    }
+  }
+}

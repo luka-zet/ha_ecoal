@@ -1,0 +1,69 @@
+# ===== macOS =====
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+.fseventsd
+.DocumentRevisions-V100
+.TemporaryItems
+.VolumeIcon.icns
+
+# ===== Python: cache i bytecode =====
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# ===== Środowiska wirtualne =====
+.venv/
+venv/
+env/
+ENV/
+
+# ===== Build / pakowanie =====
+build/
+dist/
+downloads/
+wheels/
+*.egg-info/
+.eggs/
+*.egg
+MANIFEST
+pip-wheel-metadata/
+
+# ===== Testy, coverage i cache narzędzi =====
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pytype/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+
+# ===== Jupyter =====
+.ipynb_checkpoints/
+
+# ===== Logi, pliki tymczasowe =====
+*.log
+*.tmp
+*.bak
+*.swp
+
+# ===== Sekrety / lokalna konfiguracja =====
+.env
+.env.*
+!.env.example
+
+# ===== Edytory i IDE =====
+.vscode/
+.idea/
+*.code-workspace
+
+# ===== System / Python =====
+.python-version
