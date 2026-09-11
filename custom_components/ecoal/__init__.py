@@ -336,10 +336,17 @@ def _calculate_heating_curve(
     Krzywa grzania jest linią prostą między punktami:
     - Przy -10°C -> temp_min
     - Przy +10°C -> temp_max
+    
+    Temperatura zewnętrzna poniżej -10°C lub powyżej +10°C jest traktowana jako
+    granica zakresu, co oznacza, że używa się odpowiedniej stałej wartości
+    (temp_min dla temperatur poniżej -10°C, temp_max dla temperatur powyżej +10°C).
     """
+    # Ograniczenie temperatury zewnętrznej do zakresu [-10, 10]°C
+    clamped_temp = max(-10.0, min(10.0, outdoor_temp))
+    
     slope = (temp_max - temp_min) / 20
     intercept = temp_min - slope * (-10)
-    target_temp = slope * outdoor_temp + intercept
+    target_temp = slope * clamped_temp + intercept
     target_temp = max(20, min(80, target_temp))
     return target_temp
 
